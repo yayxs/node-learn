@@ -1,0 +1,13 @@
+{
+  "name": "restful-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "mongodb": "^3.6.6",
+    "request-promise": "^4.2.6"
+  }
+}
