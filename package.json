@@ -1,7 +1,8 @@
 {
   "name": "node-learn",
-  "version": "1.0.0",
-  "description": "node-restful-api",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "了解学习node",
   "scripts": {
     "client-install": "npm install --prefix client",
     "client": "npm start --prefix client",
@@ -9,6 +10,22 @@
     "server": "nodemon src/server.js",
     "dev": "concurrently \"npm run server \" \"npm run client\""
   },
-  "author": "vast(yayxs)",
-  "license": "ISC"
+  "author": "vanlee",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yayxs/node-learn.git"
+  },
+  "keywords": [
+    "vast",
+    "yayxs",
+    "vleejs"
+  ],
+  "bugs": {
+    "url": "https://github.com/yayxs/node-learn/issues"
+  },
+  "homepage": "https://github.com/yayxs/node-learn#readme",
+  "dependencies": {
+    "prettier": "^3.0.3"
+  }
 }

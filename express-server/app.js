@@ -1,49 +1,66 @@
+// 引入express 模块
 const express = require('express');
+const utility = require('utility')
 
+// 调用express实例 一个函数
 const app = express();
-const PORT = 3000
 
-app.listen(PORT, () => {
-  console.log(`http://localhost:${PORT}`);
+const APP_PORT  =3000
+
+/**
+ * handler 函数
+ */
+
+app.get('/',(request ,response)=>{
+  const {  q } = request.query
+  console.log(q)
+
+
+  const val  =utility.md5(q)
+  response.send(val)
+})
+
+app.listen(APP_PORT, () => {
+  console.log(`http://localhost:${APP_PORT}`);
 });
 
 
-app.use(async (req,res,next)=>{
-    console.log('first')
-   await  next()
+// app.use(async (req,res,next)=>{
+//     console.log('first')
+//    await  next()
 
-    console.log('first-end')
-})
+//     console.log('first-end')
+// })
 
-app.use((req,res,next)=>{
-    console.log('sec')
-    next()
+// app.use((req,res,next)=>{
+//     console.log('sec')
+//     next()
 
-    console.log('sec-end')
-})
-
-
-app.use (async (req,res,next)=>{
-    console.log('async')
-    await next()
-    await new Promise( (resolve)=>{
-        setTimeout(()=>{
-            console.log(`wait`)
-        },1000)
-    } )
-
-    console.log('async end');
-} )
+//     console.log('sec-end')
+// })
 
 
-app.use((req,res,next)=>{
-    console.log('third')
-    next()
+// app.use (async (req,res,next)=>{
+//     console.log('async')
+//     await next()
+//     await new Promise( (resolve)=>{
+//         setTimeout(()=>{
+//             console.log(`wait`)
+//         },1000)
+//     } )
 
-    console.log('third-end')
-})
+//     console.log('async end');
+// } )
 
-app.get('/',(req,res)=>res.send('hello'))
+
+// app.use((req,res,next)=>{
+//     console.log('third')
+//     next()
+
+//     console.log('third-end')
+// })
+
+// app.get('/',(req,res)=>res.send('hello'))
 
 
 // const  http = require('http')

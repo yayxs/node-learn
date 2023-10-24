@@ -1,0 +1,22 @@
+{
+  "name": "node-server", 
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords":[],
+  "maintainers":[{"name": "vast","email": "youngwanlia@gmail.com"}],
+  "scripts": {
+    "dev": "nodemon ./src/app.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "bugs": {
+    "url": "https://github.com/yayxs/node-learn/issues"
+  },
+  "dependencies": {
+    "json5": "^2.2.0",
+    "mongodb": "^3.6.6"
+  }
+}
