@@ -24,8 +24,6 @@
   "bugs": {
     "url": "https://github.com/yayxs/node-learn/issues"
   },
-  "homepage": "https://github.com/yayxs/node-learn#readme",
-  "dependencies": {
-    "prettier": "^3.0.3"
-  }
+  "homepage": "https://github.com/yayxs/node-learn#readme"
+  
 }
